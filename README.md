@@ -33,7 +33,7 @@ using RedCardinal.Compliance.Abstractions.Hipaa;
 
 [Soc2Control("CC6.1", Description = "Implements logical access controls")]
 [Iso27001Control("A.8.3", Description = "Information access restriction")]
-[HipaaControl("164.312(a)(1)", Safeguard = HipaaSafeguard.Technical)]
+[HipaaControl("164.312(a)(1)", HipaaSafeguard.Technical)]
 public class AuthenticationService
 {
     [Soc2Control("CC6.2")]
@@ -103,8 +103,8 @@ public class AnonymousAnalyticsService { }
 ### SOC 2
 
 ```csharp
-[Soc2Control("CC6.1", Category = Soc2Category.Security)]
-[Soc2Control("A1.2", Category = Soc2Category.Availability)]
+[Soc2Control("CC6.1", Soc2Category.Security)]
+[Soc2Control("A1.2", Soc2Category.Availability)]
 ```
 
 Categories: `Security`, `Availability`, `ProcessingIntegrity`, `Confidentiality`, `Privacy`
@@ -112,7 +112,7 @@ Categories: `Security`, `Availability`, `ProcessingIntegrity`, `Confidentiality`
 ### ISO 27001
 
 ```csharp
-[Iso27001Control("A.8.24", Theme = Iso27001Theme.Technological)]
+[Iso27001Control("A.8.24", Iso27001Theme.Technological)]
 ```
 
 Themes: `Organizational`, `People`, `Physical`, `Technological`
@@ -120,7 +120,7 @@ Themes: `Organizational`, `People`, `Physical`, `Technological`
 ### GDPR
 
 ```csharp
-[GdprArticle("17", Principle = GdprPrinciple.StorageLimitation, Paragraph = "1")]
+[GdprArticle("17", GdprPrinciple.StorageLimitation, Paragraph = "1")]
 ```
 
 Principles: `LawfulnessFairnessTransparency`, `PurposeLimitation`, `DataMinimisation`, `Accuracy`, `StorageLimitation`, `SecurityOfProcessing`, `Accountability`
@@ -128,7 +128,7 @@ Principles: `LawfulnessFairnessTransparency`, `PurposeLimitation`, `DataMinimisa
 ### PCI-DSS
 
 ```csharp
-[PciDssRequirement("3.5.1", Goal = PciDssGoal.ProtectAccountData)]
+[PciDssRequirement("3.5.1", PciDssGoal.ProtectAccountData)]
 ```
 
 Goals: `SecureNetwork`, `ProtectAccountData`, `VulnerabilityManagement`, `AccessControl`, `IdentifyAndAuthenticate`, `MonitorAndTest`, `SecurityPolicy`
@@ -136,8 +136,8 @@ Goals: `SecureNetwork`, `ProtectAccountData`, `VulnerabilityManagement`, `Access
 ### HIPAA
 
 ```csharp
-[HipaaControl("164.312(a)(1)", Safeguard = HipaaSafeguard.Technical)]
-[HipaaControl("164.312(e)(1)", RequirementType = HipaaRequirementType.Addressable)]
+[HipaaControl("164.312(a)(1)", HipaaSafeguard.Technical)]
+[HipaaControl("164.312(e)(1)", HipaaRequirementType.Addressable)]
 ```
 
 Safeguards: `Administrative`, `Physical`, `Technical`, `Organizational`, `PoliciesAndProcedures`
@@ -145,8 +145,8 @@ Safeguards: `Administrative`, `Physical`, `Technical`, `Organizational`, `Polici
 ### CCPA
 
 ```csharp
-[CcpaRequirement("1798.105", Right = CcpaRight.RightToDelete)]
-[CcpaRequirement("1798.120", Right = CcpaRight.RightToOptOut)]
+[CcpaRequirement("1798.105", CcpaRight.RightToDelete)]
+[CcpaRequirement("1798.120", CcpaRight.RightToOptOut)]
 ```
 
 Rights: `RightToKnow`, `RightToDelete`, `RightToOptOut`, `RightToNonDiscrimination`, `RightToCorrect`, `RightToLimitUse`, `RightToAccess`, `RightToPortability`
@@ -154,7 +154,7 @@ Rights: `RightToKnow`, `RightToDelete`, `RightToOptOut`, `RightToNonDiscriminati
 ### CMMC
 
 ```csharp
-[CmmcPractice("AC.L2-3.1.1", Level = CmmcLevel.Level2, Domain = CmmcDomain.AccessControl)]
+[CmmcPractice("AC.L2-3.1.1", CmmcDomain.AccessControl, CmmcLevel.Level2)]
 ```
 
 Levels: `Level1`, `Level2`, `Level3`
@@ -164,7 +164,7 @@ Domains: `AccessControl`, `AwarenessAndTraining`, `AuditAndAccountability`, `Con
 ### SOX
 
 ```csharp
-[SoxControl("ITGC-AC-01", Category = SoxControlCategory.AccessControl, Section = "404")]
+[SoxControl("ITGC-AC-01", SoxControlCategory.AccessControl, Section = "404")]
 ```
 
 Categories: `AccessControl`, `ChangeManagement`, `ProgramDevelopment`, `ComputerOperations`, `BackupAndRecovery`, `SegregationOfDuties`, `SystemSecurity`, `LoggingAndMonitoring`
@@ -174,7 +174,7 @@ Control Types: `Itgc`, `ApplicationControl`, `ItDependentManual`, `EntityLevel`
 ### NIST CSF
 
 ```csharp
-[NistCsfControl("PR.AC-1", Function = NistCsfFunction.Protect, Tier = 3)]
+[NistCsfControl("PR.AC-1", NistCsfFunction.Protect, Tier = 3)]
 ```
 
 Functions: `Govern`, `Identify`, `Protect`, `Detect`, `Respond`, `Recover`
