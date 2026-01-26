@@ -58,4 +58,14 @@ public sealed class NistCsfControlAttribute : ComplianceAttributeBase
     public NistCsfControlAttribute(string controlId) : base(controlId)
     {
     }
+    
+    /// <summary>
+    /// Initializes a new instance of the <see cref="NistCsfControlAttribute"/> class with a specific function.
+    /// </summary>
+    /// <param name="controlId">The NIST CSF control identifier.</param>
+    /// <param name="function">The NIST CSF core function.</param>
+    public NistCsfControlAttribute(string controlId, NistCsfFunction function) : base(controlId)
+    {
+        Function = function;
+    }
 }

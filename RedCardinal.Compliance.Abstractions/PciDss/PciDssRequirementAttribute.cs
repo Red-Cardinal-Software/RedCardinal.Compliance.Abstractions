@@ -54,4 +54,18 @@ public sealed class PciDssRequirementAttribute : ComplianceAttributeBase
     public PciDssRequirementAttribute(string requirementId) : base(requirementId)
     {
     }
+    
+    /// <summary>
+    /// Initializes a new instance of the <see cref="PciDssRequirementAttribute"/> class with a specific goal.
+    /// </summary>
+    /// <param name="requirementId">
+    /// The PCI DSS requirement identifier (e.g., "3.5.1", "8.3.1", "10.2.1").
+    /// </param>
+    /// <param name="goal">
+    /// The PCI DSS goal this requirement belongs to.
+    /// </param>
+    public PciDssRequirementAttribute(string requirementId, PciDssGoal goal) : this(requirementId)
+    {
+        Goal = goal;
+    }
 }

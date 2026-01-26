@@ -52,4 +52,18 @@ public sealed class HipaaControlAttribute : ComplianceAttributeBase
     public HipaaControlAttribute(string controlId) : base(controlId)
     {
     }
+    
+    /// <summary>
+    /// Initializes a new instance of the <see cref="HipaaControlAttribute"/> class and sets the safeguard category.
+    /// </summary>
+    /// <param name="controlId">
+    /// The HIPAA control identifier (e.g., "164.312(a)(1)", "164.308(a)(1)(ii)(D)").
+    /// </param>
+    /// <param name="safeguard">
+    /// The safeguard category.
+    /// </param>
+    public HipaaControlAttribute(string controlId, HipaaSafeguard safeguard) : base(controlId)
+    {
+        Safeguard = safeguard;
+    }
 }

@@ -48,4 +48,18 @@ public sealed class CcpaRequirementAttribute : ComplianceAttributeBase
     public CcpaRequirementAttribute(string sectionId) : base(sectionId)
     {
     }
+    
+    /// <summary>
+    /// Initializes a new instance of the <see cref="CcpaRequirementAttribute"/> class.
+    /// </summary>
+    /// <param name="sectionId">
+    /// The California Civil Code section (e.g., "1798.100", "1798.105").
+    /// </param>
+    /// <param name="right">
+    /// The consumer right this implementation supports.
+    /// </param>
+    public CcpaRequirementAttribute(string sectionId, CcpaRight right) : base(sectionId)
+    {
+        Right = right;
+    }
 }

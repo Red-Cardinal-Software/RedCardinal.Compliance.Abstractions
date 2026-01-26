@@ -47,4 +47,14 @@ public sealed class Soc2ControlAttribute : ComplianceAttributeBase
     public Soc2ControlAttribute(string controlId) : base(controlId)
     {
     }
+    
+    /// <summary>
+    /// Initializes a new instance of the <see cref="Soc2ControlAttribute"/> class with a specific category.
+    /// </summary>
+    /// <param name="controlId">The SOC 2 control identifier.</param>
+    /// <param name="category">The Trust Service Category.</param>
+    public Soc2ControlAttribute(string controlId, Soc2Category category) : base(controlId)
+    {
+        Category = category;
+    }
 }

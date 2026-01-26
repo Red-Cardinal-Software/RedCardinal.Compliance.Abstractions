@@ -8,7 +8,7 @@
 
         <!-- NuGet Package Configuration -->
         <PackageId>RedCardinal.Compliance.Abstractions</PackageId>
-        <Version>1.0.0</Version>
+        <Version>2026.1.1</Version>
         <Authors>Red-Cardinal-Software</Authors>
         <Company>Red-Cardinal-Software</Company>
         <Description>Compliance framework attributes for annotating code with control mappings. Supports SOC 2, ISO 27001, GDPR, PCI-DSS, HIPAA, CCPA, CMMC, SOX, and NIST CSF. Enables static analysis and audit reporting for compliance frameworks.</Description>

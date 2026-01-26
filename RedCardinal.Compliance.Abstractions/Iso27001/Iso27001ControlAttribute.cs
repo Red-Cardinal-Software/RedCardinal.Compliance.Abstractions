@@ -46,4 +46,14 @@ public sealed class Iso27001ControlAttribute : ComplianceAttributeBase
     public Iso27001ControlAttribute(string controlId) : base(controlId)
     {
     }
+    
+    /// <summary>
+    /// Initializes a new instance of the <see cref="Iso27001ControlAttribute"/> class with a specific theme.
+    /// </summary>
+    /// <param name="controlId">The ISO 27001 control identifier.</param>
+    /// <param name="theme">The control theme/category.</param>
+    public Iso27001ControlAttribute(string controlId, Iso27001Theme theme) : base(controlId)
+    {
+        Theme = theme;
+    }
 }
