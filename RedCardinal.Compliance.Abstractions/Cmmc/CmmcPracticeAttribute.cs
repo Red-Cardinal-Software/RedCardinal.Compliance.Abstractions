@@ -51,4 +51,50 @@ public sealed class CmmcPracticeAttribute : ComplianceAttributeBase
     public CmmcPracticeAttribute(string practiceId) : base(practiceId)
     {
     }
+    
+    /// <summary>
+    /// Initializes a new instance of the <see cref="CmmcPracticeAttribute"/> class and sets the domain.
+    /// </summary>
+    /// <param name="practiceId">
+    /// The CMMC practice identifier (e.g., "AC.L2-3.1.1", "SC.L2-3.13.11").
+    /// </param>
+    /// <param name="domain">
+    /// The CMMC domain.
+    /// </param>
+    public CmmcPracticeAttribute(string practiceId, CmmcDomain domain) : base(practiceId)
+    {
+        Domain = domain;
+    }
+    
+    /// <summary>
+    /// Initializes a new instance of the <see cref="CmmcPracticeAttribute"/> class and sets the level.
+    /// </summary>
+    /// <param name="practiceId">
+    /// The CMMC practice identifier (e.g., "AC.L2-3.1.1", "SC.L2-3.13.11").
+    /// </param>
+    /// <param name="level">
+    /// The CMMC level.
+    /// </param>
+    public CmmcPracticeAttribute(string practiceId, CmmcLevel level) : base(practiceId)
+    {
+        Level = level;
+    }
+    
+    /// <summary>
+    /// Initializes a new instance of the <see cref="CmmcPracticeAttribute"/> class and sets the level.
+    /// </summary>
+    /// <param name="practiceId">
+    /// The CMMC practice identifier (e.g., "AC.L2-3.1.1", "SC.L2-3.13.11").
+    /// </param>
+    /// <param name="domain">
+    /// The CMMC domain.
+    /// </param>
+    /// <param name="level">
+    /// The CMMC level.
+    /// </param>
+    public CmmcPracticeAttribute(string practiceId, CmmcDomain domain, CmmcLevel level) : base(practiceId)
+    {
+        Domain = domain;
+        Level = level;
+    }
 }

@@ -60,4 +60,18 @@ public sealed class GdprArticleAttribute : ComplianceAttributeBase
     public GdprArticleAttribute(string articleNumber) : base(articleNumber)
     {
     }
+    
+    /// <summary>
+    /// Initializes a new instance of the <see cref="GdprArticleAttribute"/> class.
+    /// </summary>
+    /// <param name="articleNumber">
+    /// The GDPR article number (e.g., "17", "25", "32").
+    /// </param>
+    /// <param name="principle">
+    /// The GDPR principle this implementation supports.
+    /// </param>
+    public GdprArticleAttribute(string articleNumber, GdprPrinciple principle) : base(articleNumber)
+    {
+        Principle = principle;
+    }
 }

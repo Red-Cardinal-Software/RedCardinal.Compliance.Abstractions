@@ -57,4 +57,18 @@ public sealed class SoxControlAttribute : ComplianceAttributeBase
     public SoxControlAttribute(string controlId) : base(controlId)
     {
     }
+    
+    /// <summary>
+    /// Initializes a new instance of the <see cref="SoxControlAttribute"/> class with a specific category.
+    /// </summary>
+    /// <param name="controlId">
+    /// The control identifier (e.g., "ITGC-AC-01", "APP-01").
+    /// </param>
+    /// <param name="category">
+    /// The control category.
+    /// </param>
+    public SoxControlAttribute(string controlId, SoxControlCategory category) : base(controlId)
+    {
+        Category = category;
+    }
 }
